@@ -1,127 +1,333 @@
 """
-ingestion.py — Document loading and chunking.
+ingestion.py — Document Loading & Chunking for RAG
 
-Responsibility: turn raw files on disk into a flat list of text chunks that
-downstream steps can embed and index.
+WHY THIS FILE MATTERS (PM perspective):
+Chunking is the single most impactful decision in a RAG pipeline.
+Bad chunks = bad retrieval = bad answers, no matter how good your LLM is.
 
-Why chunking matters for RAG:
-  Embedding models have a fixed token window (typically 256-512 tokens).
-  Feeding an entire document as one vector averages out the semantics and makes
-  it hard to retrieve a *specific* passage.  Splitting into overlapping chunks
-  keeps each vector focused while the overlap preserves context at boundaries.
-
-Supported file types:
-  - PDF  — via LangChain's PyPDFLoader (backed by pypdf)
-  - DOCX — via LangChain's Docx2txtLoader (requires: pip install docx2txt)
+This file implements 3 strategies so you can compare them.
+Think of this as an A/B test for your data layer.
 """
 
 import os
-from pathlib import Path
 from typing import List
-
-from langchain_community.document_loaders import Docx2txtLoader, PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
+from langchain_text_splitters import (
+    CharacterTextSplitter,
+    RecursiveCharacterTextSplitter,
+)
 from langchain_core.documents import Document
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from dotenv import load_dotenv
 
-from src.config import DATA_DIR
+load_dotenv()
 
+# ──────────────────────────────────────────────
+# STEP 1: Load documents from the data/ folder
+# ──────────────────────────────────────────────
 
-def load_documents(data_dir: str = DATA_DIR) -> List[Document]:
-    """Load every PDF and DOCX file found directly inside *data_dir*.
-
-    Each file is opened with the appropriate LangChain loader.  PDFs are split
-    per page (one Document per page) so that page metadata is preserved.  DOCX
-    files are returned as a single Document whose page_content is the plain
-    text of the whole file.
-
-    Args:
-        data_dir: Path to the folder that holds the source documents.
-                  Defaults to the DATA_DIR setting in config.py.
-
-    Returns:
-        A list of LangChain Document objects.  Each Document has:
-          - page_content: the extracted text
-          - metadata: at minimum {"source": "<file path>"}
-
-    Raises:
-        FileNotFoundError: if *data_dir* does not exist.
+def load_documents(data_dir: str = "data") -> List[Document]:
     """
-    data_path = Path(data_dir)
-    if not data_path.exists():
-        raise FileNotFoundError(f"Data directory not found: {data_dir}")
-
-    documents: List[Document] = []
-
-    for file_path in sorted(data_path.iterdir()):
-        suffix = file_path.suffix.lower()
-
-        if suffix == ".pdf":
-            loader = PyPDFLoader(str(file_path))
-            documents.extend(loader.load())
-
-        elif suffix in (".docx", ".doc"):
-            loader = Docx2txtLoader(str(file_path))
-            documents.extend(loader.load())
-
-        # silently skip unrecognised file types (images, .DS_Store, etc.)
-
-    print(f"[ingestion] Loaded {len(documents)} document page(s) from {data_dir}")
+    Load all PDF and DOCX files from the data directory.
+    
+    Returns a list of LangChain Document objects.
+    Each Document has:
+      - page_content: the actual text
+      - metadata: source file, page number, etc.
+    
+    PM NOTE: Metadata matters! It lets you trace back which 
+    document an answer came from. This is critical for:
+    - Source attribution in your product
+    - Debugging bad answers
+    - User trust ("here's where I found this")
+    """
+    documents = []
+    
+    for filename in os.listdir(data_dir):
+        filepath = os.path.join(data_dir, filename)
+        
+        if filename.endswith(".pdf"):
+            loader = PyPDFLoader(filepath)
+            docs = loader.load()
+            # Add source filename to metadata
+            for doc in docs:
+                doc.metadata["source"] = filename
+                doc.metadata["file_type"] = "pdf"
+            documents.extend(docs)
+            print(f"  Loaded PDF: {filename} ({len(docs)} pages)")
+            
+        elif filename.endswith(".docx"):
+            loader = Docx2txtLoader(filepath)
+            docs = loader.load()
+            for doc in docs:
+                doc.metadata["source"] = filename
+                doc.metadata["file_type"] = "docx"
+            documents.extend(docs)
+            print(f"  Loaded DOCX: {filename} ({len(docs)} sections)")
+    
+    print(f"\nTotal documents loaded: {len(documents)}")
     return documents
 
 
-def chunk_documents(
-    documents: List[Document],
-    chunk_size: int = 1000,
-    chunk_overlap: int = 200,
-) -> List[Document]:
-    """Split a list of Documents into smaller, overlapping text chunks.
+# ──────────────────────────────────────────────
+# STEP 2: Three chunking strategies
+# ──────────────────────────────────────────────
 
-    Uses RecursiveCharacterTextSplitter, which tries to split on paragraph
-    boundaries first, then sentence boundaries, then words — so chunks are as
-    semantically coherent as possible given the size constraint.
-
-    Why overlap?
-      A chunk boundary might fall mid-sentence.  Repeating the last
-      *chunk_overlap* characters in the next chunk ensures that no context is
-      lost at the seam.
-
-    Args:
-        documents:    Documents returned by load_documents().
-        chunk_size:   Target character count per chunk.  1 000 chars ≈ 200–250
-                      tokens, which fits comfortably in most embedding models.
-        chunk_overlap: Characters repeated between consecutive chunks.
-                       20 % of chunk_size is a common starting point.
-
-    Returns:
-        A (longer) list of Documents where each item is one chunk.  Original
-        metadata (e.g. source file path, page number) is preserved on every
-        chunk so retrieved passages can be traced back to their origin.
+def chunk_fixed_size(documents: List[Document], chunk_size: int = 500, chunk_overlap: int = 50) -> List[Document]:
     """
-    splitter = RecursiveCharacterTextSplitter(
+    STRATEGY 1: Fixed-size chunking (the naive approach)
+    
+    HOW IT WORKS:
+    - Splits text every `chunk_size` characters
+    - Doesn't care about sentences, paragraphs, or meaning
+    - Overlap prevents losing context at boundaries
+    
+    WHEN TO USE:
+    - Quick prototyping, baseline comparison
+    - When documents have no clear structure
+    
+    PM TRADE-OFF:
+    - Pro: Fast, predictable chunk count, easy to estimate costs
+    - Con: Cuts mid-sentence, loses context, worst retrieval quality
+    - Con: "Vishal was born in" might be in one chunk, "Singtam" in another
+    """
+    splitter = CharacterTextSplitter(
+        separator="",           # Split on any character (truly fixed-size)
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
-        # Prefer splitting on double-newlines (paragraphs), then single
-        # newlines, then sentences, then words, then characters as a last
-        # resort.
-        separators=["\n\n", "\n", ". ", " ", ""],
+        length_function=len,
     )
+    
     chunks = splitter.split_documents(documents)
-    print(f"[ingestion] Split into {len(chunks)} chunks "
-          f"(size={chunk_size}, overlap={chunk_overlap})")
+    
+    # Add chunking metadata — this is important for evaluation later
+    for i, chunk in enumerate(chunks):
+        chunk.metadata["chunk_strategy"] = "fixed_size"
+        chunk.metadata["chunk_index"] = i
+        chunk.metadata["chunk_size_setting"] = chunk_size
+        chunk.metadata["actual_length"] = len(chunk.page_content)
+    
     return chunks
 
 
-def ingest(data_dir: str = DATA_DIR) -> List[Document]:
-    """Convenience wrapper: load files from disk and return ready-to-embed chunks.
-
-    This is the main entry point used by pipeline.py.  It combines load and
-    chunk into one call so callers don't need to know the two-step process.
-
-    Args:
-        data_dir: Folder containing source documents.
-
-    Returns:
-        List of text chunks as LangChain Document objects.
+def chunk_recursive(documents: List[Document], chunk_size: int = 800, chunk_overlap: int = 100) -> List[Document]:
     """
-    documents = load_documents(data_dir)
-    return chunk_documents(documents)
+    STRATEGY 2: Recursive character splitting (the smart default)
+    
+    HOW IT WORKS:
+    - Tries to split by paragraphs first (double newline)
+    - If chunk is still too big, splits by single newline
+    - Then by sentence (period + space)
+    - Then by space (word boundary)
+    - Last resort: splits by character
+    
+    This is called "recursive" because it works through the separator
+    list recursively, trying the most natural break first.
+    
+    WHEN TO USE:
+    - This is your go-to default for most RAG applications
+    - Works well with documents that have natural paragraph structure
+    
+    PM TRADE-OFF:
+    - Pro: Respects document structure, keeps sentences together
+    - Pro: Chunks make sense when read standalone
+    - Con: Chunk sizes vary (some might be very small)
+    - Con: Still doesn't understand meaning — just structure
+    """
+    splitter = RecursiveCharacterTextSplitter(
+        separators=["\n\n", "\n", ". ", " ", ""],  # Try each in order
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+        length_function=len,
+        add_start_index=True,   # Tracks position in original doc
+    )
+    
+    chunks = splitter.split_documents(documents)
+    
+    for i, chunk in enumerate(chunks):
+        chunk.metadata["chunk_strategy"] = "recursive"
+        chunk.metadata["chunk_index"] = i
+        chunk.metadata["chunk_size_setting"] = chunk_size
+        chunk.metadata["actual_length"] = len(chunk.page_content)
+    
+    return chunks
+
+
+def chunk_by_sections(documents: List[Document]) -> List[Document]:
+    """
+    STRATEGY 3: Section-based / semantic chunking
+    
+    HOW IT WORKS:
+    - Splits on section headers (like "Section 1:", "Section 2:")
+    - Each section becomes one chunk
+    - Keeps all related information together
+    
+    WHY THIS IS DIFFERENT:
+    - Strategies 1 and 2 are generic — they work on any document
+    - This strategy is CUSTOM to your document's structure
+    - This is what you'd do in production: design your chunking
+      around how your data is actually organized
+    
+    PM INSIGHT:
+    - This is the highest-quality approach because you DESIGNED
+      the document structure (in the docx I created) specifically
+      for good retrieval
+    - In enterprise RAG products, you often need custom chunking
+      per document type (e.g., contracts vs. manuals vs. emails)
+    - The PM decision: is it worth the engineering effort to build
+      custom chunkers? (Almost always yes for production)
+    
+    PM TRADE-OFF:
+    - Pro: Best retrieval quality — each chunk is self-contained
+    - Pro: Metadata is rich (section name, topic)
+    - Con: Requires knowing your document structure upfront
+    - Con: Doesn't generalize to unknown document types
+    """
+    chunks = []
+    
+    # Section markers — these match the document structure I created
+    section_markers = [
+        "Section 1: Personal Identity",
+        "Section 2: Education Timeline",
+        "Section 3: Career Timeline",
+        "Section 4: Key Relationships & Friendships",
+        "Section 5: Interests, Likes & Hobbies",
+        "Section 6: Technical & Product Skills",
+        "Section 7: Defining Moments & Lessons",
+    ]
+    
+    for doc in documents:
+        text = doc.page_content
+        
+        for i, marker in enumerate(section_markers):
+            # Find where this section starts
+            start_idx = text.find(marker)
+            if start_idx == -1:
+                continue
+            
+            # Find where the next section starts (or end of doc)
+            if i + 1 < len(section_markers):
+                next_marker = section_markers[i + 1]
+                end_idx = text.find(next_marker)
+                if end_idx == -1:
+                    end_idx = len(text)
+            else:
+                end_idx = len(text)
+            
+            section_text = text[start_idx:end_idx].strip()
+            
+            if section_text:  # Don't create empty chunks
+                chunk = Document(
+                    page_content=section_text,
+                    metadata={
+                        **doc.metadata,
+                        "chunk_strategy": "section_based",
+                        "chunk_index": i,
+                        "section_name": marker,
+                        "actual_length": len(section_text),
+                    }
+                )
+                chunks.append(chunk)
+    
+    # FALLBACK: If section-based splitting didn't work
+    # (e.g., document doesn't have our expected headers),
+    # fall back to recursive chunking
+    if not chunks:
+        print("  Warning: No sections found. Falling back to recursive chunking.")
+        return chunk_recursive(documents)
+    
+    return chunks
+
+
+# ──────────────────────────────────────────────
+# STEP 3: Compare all strategies (this is your experiment)
+# ──────────────────────────────────────────────
+
+def compare_chunking_strategies(documents: List[Document]) -> dict:
+    """
+    Run all 3 chunking strategies on the same documents and print comparison.
+    
+    This is what a PM should do: run the experiment, look at the data,
+    then make the trade-off decision.
+    """
+    print("\n" + "=" * 60)
+    print("CHUNKING STRATEGY COMPARISON")
+    print("=" * 60)
+    
+    strategies = {
+        "fixed_size": chunk_fixed_size(documents),
+        "recursive": chunk_recursive(documents),
+        "section_based": chunk_by_sections(documents),
+    }
+    
+    for name, chunks in strategies.items():
+        lengths = [len(c.page_content) for c in chunks]
+        avg_len = sum(lengths) / len(lengths) if lengths else 0
+        
+        print(f"\n--- {name.upper()} ---")
+        print(f"  Total chunks: {len(chunks)}")
+        print(f"  Avg chunk length: {avg_len:.0f} chars")
+        print(f"  Min chunk length: {min(lengths) if lengths else 0} chars")
+        print(f"  Max chunk length: {max(lengths) if lengths else 0} chars")
+        print(f"\n  First chunk preview (first 200 chars):")
+        if chunks:
+            print(f"  '{chunks[0].page_content[:200]}...'")
+    
+    return strategies
+
+
+# ──────────────────────────────────────────────
+# STEP 4: Run it! 
+# ──────────────────────────────────────────────
+
+if __name__ == "__main__":
+    """
+    Run this file directly to see the comparison:
+    
+        python src/ingestion.py
+    
+    WHAT TO LOOK FOR when you read the output:
+    
+    1. Fixed-size chunks: Do any of them cut mid-sentence? 
+       (They will. That's the point.)
+    
+    2. Recursive chunks: Do they respect paragraph boundaries?
+       (They should. Compare the previews.)
+    
+    3. Section-based chunks: Does each chunk cover one topic?
+       (Yes — because we designed the document that way.)
+    
+    4. Which strategy gives you chunks that make sense as 
+       STANDALONE pieces of text? That's the best strategy.
+       A good chunk should be understandable WITHOUT reading
+       the chunks before or after it.
+    
+    THIS IS YOUR FIRST EVAL — you're evaluating chunk quality
+    by inspection. Days 3-4 will formalize this into metrics.
+    """
+    print("Loading documents...")
+    docs = load_documents("data")
+    
+    if not docs:
+        print("\nNo documents found in data/ folder!")
+        print("Make sure you have your .docx or .pdf files in the data/ directory.")
+    else:
+        strategies = compare_chunking_strategies(docs)
+        
+        # Deep dive: print ALL chunks from each strategy so you can
+        # visually inspect quality
+        print("\n\n" + "=" * 60)
+        print("DETAILED CHUNK INSPECTION")
+        print("=" * 60)
+        
+        for name, chunks in strategies.items():
+            print(f"\n\n{'=' * 40}")
+            print(f"STRATEGY: {name}")
+            print(f"{'=' * 40}")
+            for i, chunk in enumerate(chunks):
+                print(f"\n--- Chunk {i+1} of {len(chunks)} ---")
+                print(f"Length: {len(chunk.page_content)} chars")
+                print(f"Metadata: {chunk.metadata}")
+                print(f"Content:\n{chunk.page_content[:500]}")
+                if len(chunk.page_content) > 500:
+                    print(f"  ...(truncated, {len(chunk.page_content) - 500} more chars)")
+                print()
