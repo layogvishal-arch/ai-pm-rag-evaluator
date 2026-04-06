@@ -1,0 +1,225 @@
+/Users/apple/Projects/ai-pm-rag-evaluator/venv/lib/python3.14/site-packages/langchain_core/_api/deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+Loading documents...
+  Loaded DOCX: Vishal_Goyal_RAG_Knowledge_Base.docx (1 sections)
+
+Total documents loaded: 1
+Setting up OpenAI embedding model...
+Embedding model ready.
+
+############################################################
+  STRATEGY: FIXED_SIZE (28 chunks)
+############################################################
+  Embedding 28 chunks via OpenAI API...
+  Done. Each chunk is now a 1536-dimensional vector.
+
+  QUERY: "Where was Vishal born?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5257 | strategy: fixed_size
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+  Result 2 | similarity: 0.5217 | strategy: fixed_size
+  Preview: alore (11th–12th grade)  After 10th grade, Vishal moved to Bangalore and studied at Jain College Jayanagar. This was his first experience living away from home. He had two lives — one at college and o...
+
+
+  QUERY: "What is Vishal's phone number?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5294 | strategy: fixed_size
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+  Result 2 | similarity: 0.4343 | strategy: fixed_size
+  Preview: iate Analyst (Aug 2019 – Sep 2021)  Vishal started his career at Deloitte as an analyst. The client was HP, and he was part of the support and engineering team. His day-to-day involved working on prod...
+
+
+  QUERY: "What did Vishal do at HireQuotient?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5569 | strategy: fixed_size
+  Preview: iate Analyst (Aug 2019 – Sep 2021)  Vishal started his career at Deloitte as an analyst. The client was HP, and he was part of the support and engineering team. His day-to-day involved working on prod...
+
+  Result 2 | similarity: 0.5142 | strategy: fixed_size
+  Preview: incident management workflows resulting in 20% productivity increase and 15% reliability improvement. He trained 4 junior engineers, contributing to 30% increase in team efficiency. He met Apoorv at D...
+
+
+  QUERY: "Who is Sejal?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.4506 | strategy: fixed_size
+  Preview: within ServiceNow for SKU bundling and cross-selling. Delivered Automation Center integration with Task Mining, introducing AI-driven solutions and setting the Agentic AI scope for future quarters. Le...
+
+  Result 2 | similarity: 0.4431 | strategy: fixed_size
+  Preview: s  Sejal: Girlfriend and college sweetheart from Presidency College. Together since college. Long-distance for 7+ years. She pursued MBA from IMI Delhi. They have been through tough times but continue...
+
+
+  QUERY: "What are Vishal's leadership experiences?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5597 | strategy: fixed_size
+  Preview: incident management workflows resulting in 20% productivity increase and 15% reliability improvement. He trained 4 junior engineers, contributing to 30% increase in team efficiency. He met Apoorv at D...
+
+  Result 2 | similarity: 0.5591 | strategy: fixed_size
+  Preview: d of engineering. He started with limited computer knowledge but quickly became one of the top students. He was popular for academics, leadership, and representation. Professors knew him well. He met ...
+
+
+  QUERY: "What is Vishal's salary?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5038 | strategy: fixed_size
+  Preview: iate Analyst (Aug 2019 – Sep 2021)  Vishal started his career at Deloitte as an analyst. The client was HP, and he was part of the support and engineering team. His day-to-day involved working on prod...
+
+  Result 2 | similarity: 0.4804 | strategy: fixed_size
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+
+############################################################
+  STRATEGY: RECURSIVE (20 chunks)
+############################################################
+  Embedding 20 chunks via OpenAI API...
+  Done. Each chunk is now a 1536-dimensional vector.
+
+  QUERY: "Where was Vishal born?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5190 | strategy: recursive
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+  Result 2 | similarity: 0.4402 | strategy: recursive
+  Preview: Presidency College, Bangalore (BCA, 2016–2019)  Vishal took a bold decision to pursue BCA instead of engineering. He started with limited computer knowledge but quickly became one of the top students....
+
+
+  QUERY: "What is Vishal's phone number?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.4922 | strategy: recursive
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+  Result 2 | similarity: 0.3981 | strategy: recursive
+  Preview: Presidency College, Bangalore (BCA, 2016–2019)  Vishal took a bold decision to pursue BCA instead of engineering. He started with limited computer knowledge but quickly became one of the top students....
+
+
+  QUERY: "What did Vishal do at HireQuotient?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5361 | strategy: recursive
+  Preview: HireQuotient — Product Manager (Nov 2023 – Aug 2025)  Started as an intern, became an Associate PM, then PM within 6 months. Key achievements include:  User engagement: Boosted engagement by 4x (30 to...
+
+  Result 2 | similarity: 0.5258 | strategy: recursive
+  Preview: Deloitte Consulting USI — Associate Analyst (Aug 2019 – Sep 2021)  Vishal started his career at Deloitte as an analyst. The client was HP, and he was part of the support and engineering team. His day-...
+
+
+  QUERY: "Who is Sejal?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.3783 | strategy: recursive
+  Preview: Section 4: Key Relationships & Friendships    People who matter — for personal context queries  Sejal: Girlfriend and college sweetheart from Presidency College. Together since college. Long-distance ...
+
+  Result 2 | similarity: 0.3341 | strategy: recursive
+  Preview: Presidency College, Bangalore (BCA, 2016–2019)  Vishal took a bold decision to pursue BCA instead of engineering. He started with limited computer knowledge but quickly became one of the top students....
+
+
+  QUERY: "What are Vishal's leadership experiences?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.6109 | strategy: recursive
+  Preview: Presidency College, Bangalore (BCA, 2016–2019)  Vishal took a bold decision to pursue BCA instead of engineering. He started with limited computer knowledge but quickly became one of the top students....
+
+  Result 2 | similarity: 0.5447 | strategy: recursive
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+
+  QUERY: "What is Vishal's salary?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.4626 | strategy: recursive
+  Preview: Vishal Goyal  Personal Knowledge Base    Structured for RAG retrieval — each section is a self-contained, retrievable chunk    Section 1: Personal Identity    Core biographical facts for quick retriev...
+
+  Result 2 | similarity: 0.4470 | strategy: recursive
+  Preview: Presidency College, Bangalore (BCA, 2016–2019)  Vishal took a bold decision to pursue BCA instead of engineering. He started with limited computer knowledge but quickly became one of the top students....
+
+
+############################################################
+  STRATEGY: SECTION_BASED (7 chunks)
+############################################################
+  Embedding 7 chunks via OpenAI API...
+  Done. Each chunk is now a 1536-dimensional vector.
+
+  QUERY: "Where was Vishal born?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5476 | strategy: section_based
+  Section: Section 1: Personal Identity
+  Preview: Section 1: Personal Identity    Core biographical facts for quick retrieval  Full name: Vishal Goyal  Phone: +91 9611816024  Email: vishallayog@gmail.com  Hometown: Singtam, East Sikkim, India  Curren...
+
+  Result 2 | similarity: 0.4564 | strategy: section_based
+  Section: Section 2: Education Timeline
+  Preview: Section 2: Education Timeline    Chronological education history for timeline-based queries  Early schooling (2003–2004)  Vishal started schooling at East Point School in Singtam, Sikkim. He moved to ...
+
+
+  QUERY: "What is Vishal's phone number?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5286 | strategy: section_based
+  Section: Section 1: Personal Identity
+  Preview: Section 1: Personal Identity    Core biographical facts for quick retrieval  Full name: Vishal Goyal  Phone: +91 9611816024  Email: vishallayog@gmail.com  Hometown: Singtam, East Sikkim, India  Curren...
+
+  Result 2 | similarity: 0.4078 | strategy: section_based
+  Section: Section 2: Education Timeline
+  Preview: Section 2: Education Timeline    Chronological education history for timeline-based queries  Early schooling (2003–2004)  Vishal started schooling at East Point School in Singtam, Sikkim. He moved to ...
+
+
+  QUERY: "What did Vishal do at HireQuotient?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.5260 | strategy: section_based
+  Section: Section 2: Education Timeline
+  Preview: Section 2: Education Timeline    Chronological education history for timeline-based queries  Early schooling (2003–2004)  Vishal started schooling at East Point School in Singtam, Sikkim. He moved to ...
+
+  Result 2 | similarity: 0.4710 | strategy: section_based
+  Section: Section 3: Career Timeline
+  Preview: Section 3: Career Timeline    Professional experience in chronological order  Deloitte Consulting USI — Associate Analyst (Aug 2019 – Sep 2021)  Vishal started his career at Deloitte as an analyst. Th...
+
+
+  QUERY: "Who is Sejal?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.4234 | strategy: section_based
+  Section: Section 1: Personal Identity
+  Preview: Section 1: Personal Identity    Core biographical facts for quick retrieval  Full name: Vishal Goyal  Phone: +91 9611816024  Email: vishallayog@gmail.com  Hometown: Singtam, East Sikkim, India  Curren...
+
+  Result 2 | similarity: 0.3492 | strategy: section_based
+  Section: Section 4: Key Relationships & Friendships
+  Preview: Section 4: Key Relationships & Friendships    People who matter — for personal context queries  Sejal: Girlfriend and college sweetheart from Presidency College. Together since college. Long-distance ...
+
+
+  QUERY: "What are Vishal's leadership experiences?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.6278 | strategy: section_based
+  Section: Section 2: Education Timeline
+  Preview: Section 2: Education Timeline    Chronological education history for timeline-based queries  Early schooling (2003–2004)  Vishal started schooling at East Point School in Singtam, Sikkim. He moved to ...
+
+  Result 2 | similarity: 0.5226 | strategy: section_based
+  Section: Section 1: Personal Identity
+  Preview: Section 1: Personal Identity    Core biographical facts for quick retrieval  Full name: Vishal Goyal  Phone: +91 9611816024  Email: vishallayog@gmail.com  Hometown: Singtam, East Sikkim, India  Curren...
+
+
+  QUERY: "What is Vishal's salary?"
+  --------------------------------------------------
+  Result 1 | similarity: 0.4805 | strategy: section_based
+  Section: Section 1: Personal Identity
+  Preview: Section 1: Personal Identity    Core biographical facts for quick retrieval  Full name: Vishal Goyal  Phone: +91 9611816024  Email: vishallayog@gmail.com  Hometown: Singtam, East Sikkim, India  Curren...
+
+  Result 2 | similarity: 0.4682 | strategy: section_based
+  Section: Section 2: Education Timeline
+  Preview: Section 2: Education Timeline    Chronological education history for timeline-based queries  Early schooling (2003–2004)  Vishal started schooling at East Point School in Singtam, Sikkim. He moved to ...
+
+
+============================================================
+WHAT TO OBSERVE:
+============================================================
+
+  SIMILARITY SCORES (higher = better match):
+  - > 0.7  = strong match, answer is likely in this chunk
+  - 0.5-0.7 = related but may not contain the answer
+  - < 0.5  = weak match, probably irrelevant
+
+  KEY QUESTIONS:
+  1. "Where was Vishal born?"
+     → Does the top result contain "Singtam"?
+     → Compare scores across strategies.
+
+  2. "What is Vishal's salary?"
+     → This DOESN'T EXIST in your docs.
+     → Which strategy gives the LOWEST scores here?
+       (Low score for wrong answers = good behavior)
+
+  3. "What did Vishal do at HireQuotient?"
+     → Fixed-size: probably a fragment
+     → Section-based: full career section
+     → Which is more useful for generating answers?
+    

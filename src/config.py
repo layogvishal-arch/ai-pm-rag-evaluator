@@ -31,7 +31,7 @@ CHROMA_PERSIST_DIR: str = os.getenv("CHROMA_PERSIST_DIR", "./chroma_db")
 EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 
 # Claude model used for answer generation.
-CLAUDE_MODEL: str = os.getenv("CLAUDE_MODEL", "claude-opus-4-6")
+CLAUDE_MODEL: str = os.getenv("CLAUDE_MODEL", "claude-haiku-4-5-20251001")
 
 # Maximum number of retrieved chunks passed to the generation step.
 TOP_K: int = int(os.getenv("TOP_K", "5"))
