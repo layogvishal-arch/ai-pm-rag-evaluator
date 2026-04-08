@@ -109,7 +109,7 @@ def chunk_fixed_size(documents: List[Document], chunk_size: int = 500, chunk_ove
     return chunks
 
 
-def chunk_recursive(documents: List[Document], chunk_size: int = 800, chunk_overlap: int = 100) -> List[Document]:
+def chunk_recursive(documents: List[Document], chunk_size: int = 1200, chunk_overlap: int = 300) -> List[Document]:
     """
     STRATEGY 2: Recursive character splitting (the smart default)
     
