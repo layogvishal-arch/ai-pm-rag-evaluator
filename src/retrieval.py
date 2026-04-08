@@ -47,7 +47,7 @@ class SimpleVectorStore:
         self.vectors = np.array(embedded)
         print(f"  Done. Each chunk is now a {self.vectors.shape[1]}-dimensional vector.")
 
-    def search(self, query: str, top_k: int = 3) -> List[Tuple[Document, float]]:
+    def search(self, query: str, top_k: int = 5) -> List[Tuple[Document, float]]:
         """
         Search by cosine similarity.
         Returns (document, similarity_score) tuples, highest first.

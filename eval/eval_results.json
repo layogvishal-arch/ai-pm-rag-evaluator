@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "PI-001",
+    "question": "What is Vishal's full name?",
+    "category": "personal_identity",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, **Vishal's full name is Vishal Goyal**.\n\n**Source cited:** Section 1: Personal Identity, from Vishal_Goyal_RAG_Knowledge_Base.docx",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Vishal Goyal"
+        ],
+        "missed": [],
+        "total": 1
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 1: Personal Identity"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response directly and accurately provides the expected answer 'Vishal Goyal' with proper formatting, clear presentation, and a relevant source citation. All key facts from the expected answer are included with no omissions or errors."
+      }
+    },
+    "cost": 0.00036475
+  },
+  {
+    "id": "PI-002",
+    "question": "What is Vishal's phone number?",
+    "category": "personal_identity",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the provided context, Vishal's phone number is **+91 9611816024**.\n\n**Source cited:** Section 1: Personal Identity from Vishal_Goyal_RAG_Knowledge_Base.docx",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "+91 9611816024",
+          "9611816024"
+        ],
+        "missed": [],
+        "total": 2
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 1: Personal Identity"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "System provided the exact phone number matching the expected answer (+91 9611816024), cited an appropriate source, and presented the information clearly and directly."
+      }
+    },
+    "cost": 0.00036475
+  },
+  {
+    "id": "PI-003",
+    "question": "Where was Vishal born?",
+    "category": "personal_identity",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, I don't have explicit information about where Vishal was born.\n\nHowever, the context does state that his **hometown is Singtam, East Sikkim, India** (from Section 1: Personal Identity), and he **started schooling at East Point School in Singtam, Sikkim** in 2003\u20132004 (from Section 2: Education Timeline). This suggests a strong connection to Singtam, but the documents do not explicitly confirm this as his birthplace.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.8
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Singtam",
+          "Sikkim"
+        ],
+        "missed": [],
+        "total": 2
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 1: Personal Identity"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.8,
+        "raw_score": 4,
+        "reason": "The system provided the correct answer (Singtam, East Sikkim, India) with supporting evidence from the context. However, it unnecessarily hedged by stating the documents don't 'explicitly confirm' the birthplace, when the expected answer and contextual evidence clearly establish this. The response is accurate and well-sourced but lacks confidence in a straightforward answer."
+      }
+    },
+    "cost": 0.000443
+  },
+  {
+    "id": "PI-004",
+    "question": "Where does Vishal currently live?",
+    "category": "personal_identity",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, **Vishal currently lives in Bengaluru, Karnataka, India**.\n\n**Source cited:** Section 1: Personal Identity (Source 1: Vishal_Goyal_RAG_Knowledge_Base.docx)",
+    "scores": {
+      "key_fact_recall": 0.6666666666666666,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.6666666666666666,
+        "found": [
+          "Bengaluru",
+          "Karnataka"
+        ],
+        "missed": [
+          "Bangalore"
+        ],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 1: Personal Identity"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response exactly matches the expected answer with all key facts (Bengaluru, Karnataka, India) and includes proper source attribution. The answer is well-structured and directly addresses the question."
+      }
+    },
+    "cost": 0.00037075
+  },
+  {
+    "id": "PI-005",
+    "question": "What is Vishal's email address?",
+    "category": "personal_identity",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, **Vishal's email address is vishallayog@gmail.com**.\n\n**Source cited:** Section 1: Personal Identity from Vishal_Goyal_RAG_Knowledge_Base.docx",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "vishallayog@gmail.com"
+        ],
+        "missed": [],
+        "total": 1
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 1: Personal Identity"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response provides the exact email address matching the expected answer, cites the appropriate source, and is well-formatted and clear."
+      }
+    },
+    "cost": 0.000366
+  },
+  {
+    "id": "ED-001",
+    "question": "Where did Vishal do his graduation?",
+    "category": "education",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the provided context, **Vishal did his graduation (BCA) at Presidency College, Bangalore from 2016\u20132019**.\n\n**Source cited:** Source 3: Vishal_Goyal_RAG_Knowledge_Base.docx - \"Presidency College, Bangalore (BCA, 2016\u20132019)\"\n\nThe context notes that he took a bold decision to pursue BCA instead of engineering, started with limited computer knowledge, and quickly became one of the top students during this period.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Presidency College",
+          "BCA",
+          "Bangalore"
+        ],
+        "missed": [],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 2: Education Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The response contains all key facts from the expected answer: correct college name (Presidency College, Bangalore), correct degree (BCA), and correct timeframe (2016-2019). It is well-structured, properly sourced, and includes relevant context about his academic journey."
+      }
+    },
+    "cost": 0.00044225
+  },
+  {
+    "id": "ED-002",
+    "question": "What school did Vishal attend?",
+    "category": "education",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the provided context, Vishal attended two schools:\n\n1. **East Point School in Singtam, Sikkim** (2003\u20132004) \u2014 where he started his schooling\n2. **Holy Cross School, Gangtok** (2004\u20132014) \u2014 where he studied from 1st grade through 10th grade\n\n*Sources: Section 2 (Education Timeline) from Vishal_Goyal_RAG_Knowledge_Base.docx*",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.8
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Holy Cross",
+          "East Point",
+          "Singtam"
+        ],
+        "missed": [],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 2: Education Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.8,
+        "raw_score": 4,
+        "reason": "System correctly identified both schools and the Holy Cross School dates (2004-2014). However, there's a discrepancy: the expected answer states Holy Cross School is in Singtam, Sikkim, while the system response says it's in Gangtok. The East Point School location and dates are also slightly different (2003-2004 vs just '2004-2014' in expected answer). These are minor geographical/detail differences but the core information about the two schools and main timeline is accurate."
+      }
+    },
+    "cost": 0.000437
+  },
+  {
+    "id": "ED-003",
+    "question": "What did Vishal study in 11th and 12th grade?",
+    "category": "education",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the provided context, **I don't have enough information to answer that based on the available documents.**\n\nThe context mentions that Vishal attended **Jain College, Jayanagar, Bangalore for 11th\u201312th grade** (Source 1), but it does not specify what subjects or stream he studied during that time. The documents only note that this was his first experience living away from home and that he enjoyed the hostel phase, though his academic results suffered due to \"over-enjoyment.\"\n\nHis undergraduate degree details begin with his BCA (Bachelor of Computer Applications) at Presidency College, Bangalore (2016\u20132019), which came after his 12th grade.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 0.5,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.8
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Jain College",
+          "Jayanagar",
+          "Bangalore"
+        ],
+        "missed": [],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 0.5,
+        "correct_behavior": "answer",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 2: Education Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.8,
+        "raw_score": 4,
+        "reason": "The system correctly identified that Vishal attended Jain College Jayanagar in Bangalore for 11th-12th grade, which matches the expected answer. However, the response is overly cautious by stating it doesn't have enough information, when it actually does contain the core answer. The system then provides accurate supporting details about his experience there, but frames it as incomplete information when the main question was adequately answered."
+      }
+    },
+    "cost": 0.00048775
+  },
+  {
+    "id": "ED-004",
+    "question": "What product management training did Vishal do?",
+    "category": "education",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the context provided, Vishal completed the following product management training:\n\n1. **Upraised Product Management Fellowship (Jul\u2013Nov 2023)** \u2014 Vishal completed a Product Management Fellowship at Upraised in Bengaluru. This was part of his deliberate transition from software engineering to product management.\n\n2. **LinkedIn Learning certifications (2024\u20132025)**:\n   - Generative AI for Product Managers (Jan 2024)\n   - MongoDB Aggregation Pipeline: Advanced Data Analysis and Manipulation (Jan 2025)\n\nThe context also notes that during his 4-month career transition period in 2023, he spent time \"understanding PM, learning, and talking to people,\" though specific details about that self-directed learning are not provided.\n\n*Sources: Vishal_Goyal_RAG_Knowledge_Base.docx (Source 1 and Source 2)*",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 0.5,
+      "retrieval_precision": 0.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Upraised",
+          "Product Management Fellowship",
+          "Generative AI"
+        ],
+        "missed": [],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 0.5,
+        "correct_behavior": "answer",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 0.0,
+        "found_sources": [],
+        "missed_sources": [
+          "Section 2: Education Timeline"
+        ]
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response contains all key facts from the expected answer: (1) Upraised Product Management Fellowship (Jul-Nov 2023), (2) LinkedIn Learning certification in Generative AI for Product Managers, and (3) MongoDB Aggregation Pipeline certification. The response is well-structured, provides additional context about the career transition, includes specific dates, and cites sources. All expected information is present and accurate."
+      }
+    },
+    "cost": 0.00051725
+  },
+  {
+    "id": "CA-001",
+    "question": "What was Vishal's first job?",
+    "category": "career",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, Vishal's first job was **Associate Analyst at Deloitte Consulting USI (Aug 2019 \u2013 Sep 2021)**.\n\nThis is stated in Source 1 under \"Section 3: Career Timeline,\" which lists his \"Professional experience in chronological order\" with Deloitte Consulting USI being the first entry.",
+    "scores": {
+      "key_fact_recall": 0.75,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.8
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.75,
+        "found": [
+          "Deloitte",
+          "Associate Analyst",
+          "2019"
+        ],
+        "missed": [
+          "HP"
+        ],
+        "total": 4
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.8,
+        "raw_score": 4,
+        "reason": "Contains all key facts (position, company, dates) and is well-structured with proper sourcing. Minor omission: does not mention the client was HP, which was included in the expected answer."
+      }
+    },
+    "cost": 0.00038275
+  },
+  {
+    "id": "CA-002",
+    "question": "What did Vishal achieve at HireQuotient?",
+    "category": "career",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "# Vishal's Achievements at HireQuotient\n\nBased on **Source 1**, Vishal achieved the following key results at HireQuotient (Nov 2023 \u2013 Aug 2025):\n\n1. **User Engagement**: Boosted engagement by 4x, increasing from 30 to 120 minutes by building a recruiter-first collaboration platform.\n\n2. **AI Accuracy**: Achieved 95% accuracy in production by refining OpenAI prompts for recruiter-focused AI workflows. He researched how context overloading was hurting model performance, restructured input data, updated prompts, and achieved extraordinary results with more accurate information.\n\nAdditionally, he progressed quickly through roles\u2014starting as an intern, becoming an Associate PM, then PM within 6 months.",
+    "scores": {
+      "key_fact_recall": 0.2857142857142857,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.4
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.2857142857142857,
+        "found": [
+          "4x",
+          "95%"
+        ],
+        "missed": [
+          "$1.2M",
+          "ARR",
+          "90%",
+          "20%",
+          "77%"
+        ],
+        "total": 7
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.4,
+        "raw_score": 2,
+        "reason": "The response covers only 2 out of 6 key achievements (engagement 4x and 95% AI accuracy). It is missing significant accomplishments: $1.2M ARR, Hiring Manager collaboration module ($50K revenue), 90% reduction in funnel drop-offs, and improved outreach accuracy (20% to 77%). While the information provided is accurate, the substantial omissions of major business metrics constitute significant gaps."
+      }
+    },
+    "cost": 0.00048425
+  },
+  {
+    "id": "CA-003",
+    "question": "What is Vishal's current role?",
+    "category": "career",
+    "difficulty": "hard",
+    "is_answerable": true,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe provided context shows Vishal's career history up to a Product Management Fellowship at Upraised (Jul\u2013Nov 2023) and LinkedIn Learning certifications completed in 2024\u20132025, but it does not specify what his current role is. The documents appear to be a personal knowledge base that tracks his background and past positions, but they do not include information about his present employment or position.",
+    "scores": {
+      "key_fact_recall": 0.25,
+      "hallucination": 0.5,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.4
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.25,
+        "found": [
+          "2025"
+        ],
+        "missed": [
+          "Tech Mahindra",
+          "Product Lead",
+          "ServiceNow"
+        ],
+        "total": 4
+      },
+      "hallucination": {
+        "score": 0.5,
+        "correct_behavior": "answer",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.4,
+        "raw_score": 2,
+        "reason": "The system refused to answer despite having access to information about Vishal's current role. While the system correctly noted that available documents may be incomplete, it should have provided the information that was available (Product Lead at Tech Mahindra, Senior Inbound Product Manager at ServiceNow since September 2025) rather than claiming insufficient information. This is a refusal error when partial or complete information was accessible."
+      }
+    },
+    "cost": 0.00040525
+  },
+  {
+    "id": "CA-004",
+    "question": "How did Vishal transition from engineering to product management?",
+    "category": "career",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "# Vishal's Transition from Software Engineering to Product Management\n\nBased on the context, here's how Vishal made this transition:\n\n## The Decision and Preparation (2023)\nVishal **quit his software engineering job to pursue product management** and spent **4 months understanding PM, learning, and talking to people** [Source 1]. He describes this as \"one of the toughest challenges he thoroughly enjoyed.\"\n\n## The Challenge\nWithout an MBA or engineering degree, getting into product was \"extremely challenging.\" He needed to secure an internship first and then convert it into a full-time role [Source 1].\n\n## Formal Training\nHe completed the **Upraised Product Management Fellowship (Jul\u2013Nov 2023)** in Bengaluru as part of his deliberate transition [Source 3].\n\n## Breaking Into PM at HireQuotient (Nov 2023 onwards)\nHe started as an **intern at HireQuotient, became an Associate PM, then PM within 6 months** [Source 1]. This internship-to-full-time conversion was critical to his career change.\n\n## Continuous Learning\nHe continued upskilling with LinkedIn Learning certifications including **Generative AI for Product Managers (Jan 2024)** [Source 3].\n\n**Key takeaway:** Vishal's transition was deliberate and required self-directed learning, formal fellowship training, and willingness to start as an intern despite his prior software engineering experience.",
+    "scores": {
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "retrieval_precision": 0.5,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.8,
+        "found": [
+          "quit",
+          "4 months",
+          "internship",
+          "HireQuotient"
+        ],
+        "missed": [
+          "without MBA"
+        ],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 0.5,
+        "found_sources": [
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": [
+          "Section 7: Defining Moments"
+        ]
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The response comprehensively covers all key facts from the expected answer: quitting engineering in 2023, 4 months of learning and networking, HireQuotient internship conversion to full-time, and PM role within 6 months without MBA or engineering degree. It's well-structured with clear sections, includes relevant details about the PM fellowship, and accurately represents the journey with proper sourcing."
+      }
+    },
+    "cost": 0.000669
+  },
+  {
+    "id": "CA-005",
+    "question": "What AI/ML work has Vishal done?",
+    "category": "career",
+    "difficulty": "hard",
+    "is_answerable": true,
+    "answer": "Based on the provided context, I don't have enough information to answer that. \n\nThe documents mention that Vishal completed a certification in \"Generative AI for Product Managers\" (Jan 2024) [Source 2], but this was a learning/certification course rather than actual AI/ML work experience.\n\nThe context does not contain details about any AI/ML projects or work that Vishal has undertaken in his professional roles. His documented work experience focuses on software development features (search functionality, notification systems, OAuth2 integration) and production support, but no AI/ML-specific implementations are mentioned.",
+    "scores": {
+      "key_fact_recall": 0.0,
+      "hallucination": 0.5,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.2
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.0,
+        "found": [],
+        "missed": [
+          "95%",
+          "OpenAI",
+          "prompt",
+          "Copilot",
+          "agentic",
+          "Task Mining"
+        ],
+        "total": 6
+      },
+      "hallucination": {
+        "score": 0.5,
+        "correct_behavior": "answer",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.2,
+        "raw_score": 1,
+        "reason": "System refused to answer despite expected answer containing specific AI/ML work details (OpenAI prompt refinement at 95% accuracy, GenAI Copilot design, LLM optimization, agentic AI workflows, Task Mining). The system claimed insufficient information when the expected answer indicates this information should be in the provided context."
+      }
+    },
+    "cost": 0.00043
+  },
+  {
+    "id": "CA-006",
+    "question": "What companies has Vishal worked at?",
+    "category": "career",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the provided context, Vishal has worked at the following companies:\n\n1. **Deloitte Consulting USI** \u2014 Associate Analyst (Aug 2019 \u2013 Sep 2021) [Source 2]\n\n2. **Inviz AI Solutions** \u2014 Software Development Engineer (Feb\u2013Sep 2022) [Source 2]\n\n3. **Labra.io by Ibexlabs** \u2014 Software Engineer (Oct 2022 \u2013 Jun 2023) [Source 2]\n\nAdditionally, he completed a **Product Management Fellowship at Upraised** in Bengaluru (Jul\u2013Nov 2023), which was part of his transition from software engineering to product management [Source 1].",
+    "scores": {
+      "key_fact_recall": 0.6,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.6
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.6,
+        "found": [
+          "Deloitte",
+          "Inviz",
+          "Labra"
+        ],
+        "missed": [
+          "HireQuotient",
+          "Tech Mahindra"
+        ],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.6,
+        "raw_score": 3,
+        "reason": "The response correctly identifies 3 out of 5 companies (Deloitte, Inviz AI Solutions, Labra.io), but is missing HireQuotient and Tech Mahindra/ServiceNow from the expected answer. The information provided is accurate and well-sourced, but the significant omission of 2 companies prevents a higher score."
+      }
+    },
+    "cost": 0.000479
+  },
+  {
+    "id": "RE-001",
+    "question": "Who is Sejal?",
+    "category": "relationships",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the provided context, **Sejal is Vishal Goyal's girlfriend and college sweetheart from Presidency College**. They have been together since college and have maintained a long-distance relationship for over 7 years. She pursued an MBA from IMI Delhi.\n\n**Sources cited:**\n- Source 1: Key Relationships & Friendships section\n- Source 3: Personal Identity section (Section 1)",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "girlfriend",
+          "Presidency",
+          "long-distance",
+          "7 years",
+          "IMI Delhi"
+        ],
+        "missed": [],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 4: Key Relationships"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response contains all key facts from the expected answer: Sejal is Vishal's girlfriend and college sweetheart from Presidency College, they've been together since college in a long-distance relationship for 7+ years, and she pursued an MBA from IMI Delhi. The answer is well-structured, accurate, and properly cites sources."
+      }
+    },
+    "cost": 0.00040275
+  },
+  {
+    "id": "RE-002",
+    "question": "Who is Ashish?",
+    "category": "relationships",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the provided context, **Ashish is Vishal Goyal's best friend from Holy Cross School, whom he met in 1st grade.**\n\nAccording to the sources, Ashish was the **Captain of Yellow House** at Holy Cross School and remains **one of Vishal's closest friends to this day**.\n\n**Sources cited:**\n- Source 3: Section 2 (Education Timeline) and Section 1 (Personal Identity)\n- Source 2: Section 4 (Key Relationships & Friendships)",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Holy Cross",
+          "1st grade",
+          "Yellow House",
+          "closest friend"
+        ],
+        "missed": [],
+        "total": 4
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 4: Key Relationships"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response contains all key facts from the expected answer: (1) best friend from Holy Cross School, (2) met in 1st grade, (3) Captain of Yellow House, (4) still one of Vishal's closest friends. The answer is well-structured, properly sourced, and uses clear formatting to highlight the key information."
+      }
+    },
+    "cost": 0.00044724999999999995
+  },
+  {
+    "id": "RE-003",
+    "question": "Who are Vishal's college friends?",
+    "category": "relationships",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the context provided, Vishal's college friends are:\n\n**From Presidency College, Bangalore (2016\u20132019):**\n- **Kunal, Shikhar, Umang, and Sahil** \u2014 described as his college friend group who are \"still among his closest friends.\" According to the source, they used to drink together, rent cars, learn driving, go on trips, and eat samosas and pani puris.\n\n**From Jain College, Jayanagar (11th\u201312th grade):**\n- **Bhavik** \u2014 whom he met during his time at Jain College and remains a close friend.\n\n**Also from Holy Cross School who joined Presidency College:**\n- **Avijeet** \u2014 who joined Presidency College and stayed together with Vishal during college.\n\n**Source:** [Source 2: Vishal_Goyal_RAG_Knowledge_Base.docx] and [Source 1: Vishal_Goyal_RAG_Knowledge_Base.docx]",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 0.0,
+      "llm_judge": 0.8
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Kunal",
+          "Shikhar",
+          "Umang",
+          "Sahil",
+          "Avijeet"
+        ],
+        "missed": [],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 0.0,
+        "found_sources": [],
+        "missed_sources": [
+          "Section 4: Key Relationships"
+        ]
+      },
+      "llm_judge": {
+        "score": 0.8,
+        "raw_score": 4,
+        "reason": "The response correctly identifies all four main college friends (Kunal, Shikhar, Umang, Sahil) from Presidency College and Avijeet from school who joined Presidency, matching the expected answer. However, it includes additional information about Bhavik from Jain College (11th-12th grade) which was not in the expected answer, suggesting some extra context that may or may not be relevant. The core expected facts are all present and accurate, with good structure and sourcing, but the addition of non-requested information slightly exceeds the scope of what was expected."
+      }
+    },
+    "cost": 0.000608
+  },
+  {
+    "id": "IN-001",
+    "question": "What sports does Vishal follow?",
+    "category": "interests",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, **Vishal follows cricket and football**.\n\nSpecifically:\n- **Cricket**: He watches a lot of cricket\n- **Football**: He watches a lot of football, and his favorite football team is **Chelsea Football Club**\n\nAdditionally, the context notes that he played football in school and was captain of the junior football team in 5th grade at Holy Cross School.\n\n**Source cited**: Section 5: Interests, Likes & Hobbies (Sports subsection) from Vishal_Goyal_RAG_Knowledge_Base.docx",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "cricket",
+          "football",
+          "Chelsea"
+        ],
+        "missed": [],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 5: Interests"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system's response contains all key facts from the expected answer (cricket, football, and Chelsea Football Club as favorite team). It is well-structured, accurately sourced, and goes beyond the expected answer by providing relevant additional context about his school football experience, which adds credibility without contradicting the expected information."
+      }
+    },
+    "cost": 0.0004715
+  },
+  {
+    "id": "IN-002",
+    "question": "What anime has Vishal watched?",
+    "category": "interests",
+    "difficulty": "easy",
+    "is_answerable": true,
+    "answer": "Based on the context provided, Vishal has watched the following anime:\n\n1. **Naruto**\n2. **Bleach**\n3. **Haikyuu**\n\n**Source:** Section 5: Interests, Likes & Hobbies (Source 1: Vishal_Goyal_RAG_Knowledge_Base.docx)",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Naruto",
+          "Bleach",
+          "Haikyuu"
+        ],
+        "missed": [],
+        "total": 3
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 5: Interests"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The response contains all three anime from the expected answer (Naruto, Bleach, Haikyuu) in a well-structured format with proper citations to the source document."
+      }
+    },
+    "cost": 0.00041775
+  },
+  {
+    "id": "IN-003",
+    "question": "What programming languages does Vishal know?",
+    "category": "skills",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the provided context, I can only confirm that Vishal knows **Python**.\n\n**Citation:** Source 3 states that \"After Deloitte, Vishal wanted to get into software engineering. He self-taught Python and moved into startup roles.\"\n\nThe context does not provide a comprehensive list of all programming languages Vishal knows. While his work experience mentions implementing features and resolving bugs in software engineering roles, the specific programming languages used in those positions are not detailed in the available documents.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 0.0,
+      "llm_judge": 0.4
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Python"
+        ],
+        "missed": [],
+        "total": 1
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 0.0,
+        "found_sources": [],
+        "missed_sources": [
+          "Section 6: Technical Skills"
+        ]
+      },
+      "llm_judge": {
+        "score": 0.4,
+        "raw_score": 2,
+        "reason": "System correctly identifies Python but misses several important details from the expected answer: APIs, JSON, and specific tools (Algolia, Azure OAuth2). The response acknowledges limitations in available context, which is honest, but this suggests the RAG system lacks access to complete information about Vishal's skills that should have been in the knowledge base."
+      }
+    },
+    "cost": 0.00041275000000000003
+  },
+  {
+    "id": "IN-004",
+    "question": "What product tools does Vishal use?",
+    "category": "skills",
+    "difficulty": "medium",
+    "is_answerable": true,
+    "answer": "Based on the provided context, I can identify the following product tools that Vishal has used or worked with:\n\n1. **Algolia** \u2014 Used for implementing on-the-go search features at Inviz AI Solutions (Feb\u2013Sep 2022)\n\n2. **Azure OAuth2** \u2014 Integrated at Labra.io by Ibexlabs (Oct 2022 \u2013 Jun 2023) for product reach expansion\n\n3. **OpenAI** \u2014 Used for recruiter-focused AI workflows at HireQuotient (Nov 2023 \u2013 Aug 2025), where he refined prompts to achieve 95% accuracy in production\n\n4. **MongoDB** \u2014 He completed a certification in \"MongoDB Aggregation Pipeline: Advanced Data Analysis and Manipulation\" (Jan 2025)\n\n**Sources:** Source 2 (Inviz AI Solutions and Labra.io roles) and Source 3 (HireQuotient role and AI work)\n\nHowever, I should note that the context focuses primarily on tools used in his engineering and product roles rather than a comprehensive list of all product management tools he may use.",
+    "scores": {
+      "key_fact_recall": 0.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 0.0,
+      "llm_judge": 0.2
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.0,
+        "found": [],
+        "missed": [
+          "Jira",
+          "Figma",
+          "Postman",
+          "Mixpanel",
+          "Claude"
+        ],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 0.0,
+        "found_sources": [],
+        "missed_sources": [
+          "Section 6: Technical Skills"
+        ]
+      },
+      "llm_judge": {
+        "score": 0.2,
+        "raw_score": 1,
+        "reason": "The system's response is entirely incorrect. It lists technical tools (Algolia, Azure OAuth2, OpenAI, MongoDB) that Vishal used in engineering/development roles, not product management tools. The expected answer clearly specifies product tools like Jira, Figma, Whimsical, Postman, Intercom, Monday, Confluence, Mixpanel, Slack, ChatGPT, and Claude. The system appears to have misunderstood the question or accessed incorrect context, providing a fundamentally different set of tools than what was expected."
+      }
+    },
+    "cost": 0.000572
+  },
+  {
+    "id": "UN-001",
+    "question": "What is Vishal's salary?",
+    "category": "unanswerable",
+    "difficulty": "easy",
+    "is_answerable": false,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe context provided includes details about Vishal Goyal's education, career positions, and personal background, but it does not contain any information about his salary.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [],
+        "missed": [],
+        "total": 0
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "refuse",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [],
+        "missed_sources": [],
+        "detail": "No expected sources (unanswerable)"
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system correctly refused to answer by clearly stating it lacks the necessary information. The response is direct, appropriate, and explicitly acknowledges that the available documents do not contain salary information."
+      }
+    },
+    "cost": 0.000362
+  },
+  {
+    "id": "UN-002",
+    "question": "What is Vishal's blood type?",
+    "category": "unanswerable",
+    "difficulty": "easy",
+    "is_answerable": false,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe provided context from Vishal Goyal's knowledge base includes personal identity, education timeline, and career information, but does not contain any details about his blood type.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [],
+        "missed": [],
+        "total": 0
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "refuse",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [],
+        "missed_sources": [],
+        "detail": "No expected sources (unanswerable)"
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "System correctly refused to answer, clearly stated the information is not available in the documents, and provided appropriate context about what information is actually available. No hedging or speculation."
+      }
+    },
+    "cost": 0.00036475
+  },
+  {
+    "id": "UN-003",
+    "question": "What university did Sejal attend for her undergraduate degree?",
+    "category": "unanswerable",
+    "difficulty": "medium",
+    "is_answerable": false,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe context mentions that Vishal met his girlfriend Sejal at Presidency College, Bangalore, and that they are still together, but it does not contain any information about Sejal's undergraduate degree or which university she attended.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [],
+        "missed": [],
+        "total": 0
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "refuse",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [],
+        "missed_sources": [],
+        "detail": "No expected sources (unanswerable)"
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system correctly refused to answer, clearly stated that information is not available in the documents, and even provided relevant context about what IS known (Sejal met Vishal at Presidency College) while being explicit that this doesn't answer the question asked."
+      }
+    },
+    "cost": 0.00038175
+  },
+  {
+    "id": "UN-004",
+    "question": "How many people report to Vishal at Tech Mahindra?",
+    "category": "unanswerable",
+    "difficulty": "medium",
+    "is_answerable": false,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe provided context does not contain any information about Vishal Goyal working at Tech Mahindra or managing a team there. The documents cover his education at Presidency College, his roles at Deloitte Consulting USI, Inviz AI Solutions, Labra.io, and HireQuotient, but there is no mention of Tech Mahindra employment or direct reports.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [],
+        "missed": [],
+        "total": 0
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "refuse",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [],
+        "missed_sources": [],
+        "detail": "No expected sources (unanswerable)"
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "System correctly refused to answer by stating lack of information. Response clearly explained why the question cannot be answered (no Tech Mahindra employment found in documents) and listed the actual organizations where information was available. No speculation or hallucination present."
+      }
+    },
+    "cost": 0.00039099999999999996
+  },
+  {
+    "id": "UN-005",
+    "question": "What was Vishal's GPA in college?",
+    "category": "unanswerable",
+    "difficulty": "easy",
+    "is_answerable": false,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe context provided includes details about Vishal's college education at Presidency College, Bangalore (BCA, 2016\u20132019), including that he became one of the top students and was popular for academics. However, there is no specific GPA or grade point average mentioned in any of the sources.",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 1.0
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [],
+        "missed": [],
+        "total": 0
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "refuse",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [],
+        "missed_sources": [],
+        "detail": "No expected sources (unanswerable)"
+      },
+      "llm_judge": {
+        "score": 1.0,
+        "raw_score": 5,
+        "reason": "The system correctly refused to answer the unanswerable question by explicitly stating it lacks the necessary information. The response is direct and appropriate, avoiding speculation or hallucination despite having some contextual information about Vishal's college performance."
+      }
+    },
+    "cost": 0.0004015
+  },
+  {
+    "id": "CC-001",
+    "question": "What are Vishal's leadership experiences?",
+    "category": "cross_cutting",
+    "difficulty": "hard",
+    "is_answerable": true,
+    "answer": "Based on the provided context, here are Vishal's documented leadership experiences:\n\n1. **Class Monitor at Holy Cross School, Gangtok (2004\u20132014)** \u2014 He became class monitor in his early schooling years, though he notes he \"became the class monitor for the first time without understanding what the role meant.\" [Source 2]\n\n2. **Leadership at Presidency College, Bangalore (2016\u20132019)** \u2014 The context mentions he was \"popular for academics, leadership, and representation\" and that \"Professors knew him well.\" He also formed and led a close friend group with Kunal, Shikhar, Umang, and Sahil. [Source 1]\n\nHowever, the context does not provide specific details about the nature of his leadership roles at Presidency College or any formal leadership positions he held. The documents focus more on his academic performance and social connections rather than detailed leadership accomplishments.\n\nI don't have enough information about other formal leadership roles or experiences beyond these two periods based on the available documents.",
+    "scores": {
+      "key_fact_recall": 0.25,
+      "hallucination": 0.5,
+      "retrieval_precision": 0.6666666666666666,
+      "llm_judge": 0.4
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.25,
+        "found": [
+          "monitor"
+        ],
+        "missed": [
+          "captain",
+          "trained",
+          "cross-functional"
+        ],
+        "total": 4
+      },
+      "hallucination": {
+        "score": 0.5,
+        "correct_behavior": "answer",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 0.6666666666666666,
+        "found_sources": [
+          "Section 2: Education Timeline",
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": [
+          "Section 7: Defining Moments"
+        ]
+      },
+      "llm_judge": {
+        "score": 0.4,
+        "raw_score": 2,
+        "reason": "The system found only 2 out of 5 expected leadership experiences (class monitor and Presidency College general popularity/leadership). It completely missed: football captain in 5th grade, training 4 engineers at Deloitte, and leading cross-functional teams at ServiceNow. The response correctly acknowledges missing information but fails to retrieve significant documented experiences, particularly the professional leadership roles at Deloitte and ServiceNow which are core to Vishal's career trajectory."
+      }
+    },
+    "cost": 0.0005614999999999999
+  },
+  {
+    "id": "CC-002",
+    "question": "Tell me about Vishal's journey from Sikkim to becoming a PM.",
+    "category": "cross_cutting",
+    "difficulty": "hard",
+    "is_answerable": true,
+    "answer": "# Vishal's Journey from Sikkim to Becoming a PM\n\n**Early Years in Sikkim (2003\u20132014)**\nVishal started his education at East Point School in Singtam, East Sikkim in 2003\u20132004, then moved to Holy Cross School in Gangtok in 1st grade (2004). [Source 2] He grew up in Singtam, East Sikkim before eventually relocating. [Source 2]\n\n**Education & Career Foundation**\nHe pursued a BCA degree at Presidency College, Bangalore (2016\u20132019), making a bold decision to choose BCA over engineering despite limited initial computer knowledge. He excelled academically and became one of the top students. [Source 3]\n\n**Professional Experience**\nAfter graduation, he worked as an Associate Analyst at Deloitte Consulting USI (Aug 2019 \u2013 Sep 2021). [Source 3]\n\n**Transition to Product Management (2023)**\nIn 2023, Vishal quit his software engineering job to pursue product management. He completed a Product Management Fellowship at Upraised in Bengaluru (Jul\u2013Nov 2023) and spent 4 months learning and talking to people in the field. [Sources 1 & 3] Without an MBA or engineering degree, this was extremely challenging\u2014he needed to start with an internship and convert it to a full-time role, which he describes as \"one of the toughest challenges he thoroughly enjoyed.\" [Source 1]\n\n**Current Role**\nHe joined HireQuotient as a PM (Nov 2023 \u2013 Aug 2025), progressing from intern to Associate PM to PM within 6 months. [Source 1]",
+    "scores": {
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "retrieval_precision": 1.0,
+      "llm_judge": 0.8
+    },
+    "details": {
+      "fact_recall": {
+        "score": 1.0,
+        "found": [
+          "Singtam",
+          "Bangalore",
+          "Deloitte",
+          "HireQuotient",
+          "PM"
+        ],
+        "missed": [],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 1.0,
+        "correct_behavior": "answer",
+        "actual_behavior": "answered"
+      },
+      "retrieval": {
+        "score": 1.0,
+        "found_sources": [
+          "Section 2: Education Timeline",
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": []
+      },
+      "llm_judge": {
+        "score": 0.8,
+        "raw_score": 4,
+        "reason": "The response covers most key facts from the expected answer including: Sikkim origins (Singtam), Holy Cross School, BCA at Presidency, Deloitte analyst role, transition to PM, Upraised fellowship, and HireQuotient internship/PM role. Minor omissions include: not mentioning Jain College for 11th grade in Bangalore, not explicitly stating 'self-taught programming' or 'software engineer' role before quitting for PM (though implied). The structure is clear and well-sourced, making it a comprehensive response with only minor details missing."
+      }
+    },
+    "cost": 0.0007637500000000001
+  },
+  {
+    "id": "CC-003",
+    "question": "What failures or setbacks has Vishal faced?",
+    "category": "cross_cutting",
+    "difficulty": "hard",
+    "is_answerable": true,
+    "answer": "I don't have enough information to answer that based on the available documents.\n\nThe provided context from Vishal Goyal's Knowledge Base focuses on his accomplishments, education timeline, and career progression. It does not contain any information about failures or setbacks he has experienced.\n\nTo answer your question, I would need documents or sections that specifically discuss challenges, failures, or difficult periods in his personal or professional life.",
+    "scores": {
+      "key_fact_recall": 0.0,
+      "hallucination": 0.5,
+      "retrieval_precision": 0.6666666666666666,
+      "llm_judge": 0.2
+    },
+    "details": {
+      "fact_recall": {
+        "score": 0.0,
+        "found": [],
+        "missed": [
+          "4th grade",
+          "11th",
+          "breakup",
+          "CRM adoption",
+          "20%"
+        ],
+        "total": 5
+      },
+      "hallucination": {
+        "score": 0.5,
+        "correct_behavior": "answer",
+        "actual_behavior": "refused"
+      },
+      "retrieval": {
+        "score": 0.6666666666666666,
+        "found_sources": [
+          "Section 2: Education Timeline",
+          "Section 3: Career Timeline"
+        ],
+        "missed_sources": [
+          "Section 7: Defining Moments"
+        ]
+      },
+      "llm_judge": {
+        "score": 0.2,
+        "raw_score": 1,
+        "reason": "The system refused to answer despite the expected answer containing specific, factual information about Vishal's documented setbacks (4th grade results, 11th-12th grade struggles, 9th grade breakup, CRM adoption challenges, outreach accuracy metrics). This indicates the information exists in the knowledge base but the system failed to retrieve or surface it, resulting in a false negative response."
+      }
+    },
+    "cost": 0.00038825000000000003
+  }
+]

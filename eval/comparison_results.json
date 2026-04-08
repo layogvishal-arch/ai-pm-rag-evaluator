@@ -1,0 +1,637 @@
+{
+  "baseline": [
+    {
+      "id": "PI-001",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "PI-002",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "PI-003",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "PI-004",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 0.6666666666666666,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Bangalore"
+      ]
+    },
+    {
+      "id": "PI-005",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-001",
+      "category": "education",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-002",
+      "category": "education",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-003",
+      "category": "education",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 0.5,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-004",
+      "category": "education",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.3333333333333333,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Upraised",
+        "Product Management Fellowship"
+      ]
+    },
+    {
+      "id": "CA-001",
+      "category": "career",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 0.75,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "HP"
+      ]
+    },
+    {
+      "id": "CA-002",
+      "category": "career",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.2857142857142857,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "$1.2M",
+        "ARR",
+        "90%",
+        "20%",
+        "77%"
+      ]
+    },
+    {
+      "id": "CA-003",
+      "category": "career",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.25,
+      "hallucination": 0.5,
+      "missed_facts": [
+        "Tech Mahindra",
+        "Product Lead",
+        "ServiceNow"
+      ]
+    },
+    {
+      "id": "CA-004",
+      "category": "career",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "without MBA"
+      ]
+    },
+    {
+      "id": "CA-005",
+      "category": "career",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.5,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Copilot",
+        "agentic",
+        "Task Mining"
+      ]
+    },
+    {
+      "id": "CA-006",
+      "category": "career",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Tech Mahindra"
+      ]
+    },
+    {
+      "id": "RE-001",
+      "category": "relationships",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "RE-002",
+      "category": "relationships",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.25,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "1st grade",
+        "Yellow House",
+        "closest friend"
+      ]
+    },
+    {
+      "id": "RE-003",
+      "category": "relationships",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-001",
+      "category": "interests",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-002",
+      "category": "interests",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-003",
+      "category": "skills",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-004",
+      "category": "skills",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.0,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Jira",
+        "Figma",
+        "Postman",
+        "Mixpanel",
+        "Claude"
+      ]
+    },
+    {
+      "id": "UN-001",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-002",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-003",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-004",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-005",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "CC-001",
+      "category": "cross_cutting",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.5,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "trained",
+        "cross-functional"
+      ]
+    },
+    {
+      "id": "CC-002",
+      "category": "cross_cutting",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "HireQuotient"
+      ]
+    },
+    {
+      "id": "CC-003",
+      "category": "cross_cutting",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.0,
+      "hallucination": 0.5,
+      "missed_facts": [
+        "4th grade",
+        "11th",
+        "breakup",
+        "CRM adoption",
+        "20%"
+      ]
+    }
+  ],
+  "parent_child": [
+    {
+      "id": "PI-001",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "PI-002",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "PI-003",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "PI-004",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 0.6666666666666666,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Bangalore"
+      ]
+    },
+    {
+      "id": "PI-005",
+      "category": "personal_identity",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-001",
+      "category": "education",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-002",
+      "category": "education",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-003",
+      "category": "education",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 0.5,
+      "missed_facts": []
+    },
+    {
+      "id": "ED-004",
+      "category": "education",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "CA-001",
+      "category": "career",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "CA-002",
+      "category": "career",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.0,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "4x",
+        "95%",
+        "$1.2M",
+        "ARR",
+        "90%",
+        "20%",
+        "77%"
+      ]
+    },
+    {
+      "id": "CA-003",
+      "category": "career",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.25,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Tech Mahindra",
+        "Product Lead",
+        "ServiceNow"
+      ]
+    },
+    {
+      "id": "CA-004",
+      "category": "career",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "without MBA"
+      ]
+    },
+    {
+      "id": "CA-005",
+      "category": "career",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.5,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Copilot",
+        "agentic",
+        "Task Mining"
+      ]
+    },
+    {
+      "id": "CA-006",
+      "category": "career",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Tech Mahindra"
+      ]
+    },
+    {
+      "id": "RE-001",
+      "category": "relationships",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.8,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "7 years"
+      ]
+    },
+    {
+      "id": "RE-002",
+      "category": "relationships",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "RE-003",
+      "category": "relationships",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-001",
+      "category": "interests",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-002",
+      "category": "interests",
+      "difficulty": "easy",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-003",
+      "category": "skills",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "IN-004",
+      "category": "skills",
+      "difficulty": "medium",
+      "is_answerable": true,
+      "key_fact_recall": 0.0,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "Jira",
+        "Figma",
+        "Postman",
+        "Mixpanel",
+        "Claude"
+      ]
+    },
+    {
+      "id": "UN-001",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-002",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-003",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-004",
+      "category": "unanswerable",
+      "difficulty": "medium",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "UN-005",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "is_answerable": false,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "CC-001",
+      "category": "cross_cutting",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.25,
+      "hallucination": 0.5,
+      "missed_facts": [
+        "monitor",
+        "captain",
+        "cross-functional"
+      ]
+    },
+    {
+      "id": "CC-002",
+      "category": "cross_cutting",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 1.0,
+      "hallucination": 1.0,
+      "missed_facts": []
+    },
+    {
+      "id": "CC-003",
+      "category": "cross_cutting",
+      "difficulty": "hard",
+      "is_answerable": true,
+      "key_fact_recall": 0.0,
+      "hallucination": 1.0,
+      "missed_facts": [
+        "4th grade",
+        "11th",
+        "breakup",
+        "CRM adoption",
+        "20%"
+      ]
+    }
+  ],
+  "summary": {
+    "baseline_fact_recall": 0.7645238095238096,
+    "parent_child_fact_recall": 0.8022222222222222,
+    "delta": 0.037698412698412564
+  }
+}
